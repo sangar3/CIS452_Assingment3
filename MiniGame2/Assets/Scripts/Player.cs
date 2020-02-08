@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
    private Vector2 targetPos;
    public float Yincrement;
-
+   public AudioClip gameoverfx;
+    
    public float playerspeed;
    public float maxHeight;
    public float minHeight;
@@ -21,7 +22,9 @@ public class Player : MonoBehaviour
         healthDisplay.text = health.ToString(); // settting healthdisplay text to health value
         if (health <= 0)
         {
+            
             SceneManager.LoadScene("GameOver");
+            AudioManager.Instance.PlaySFX(gameoverfx, 3.0f);
         }
         transform.position = Vector2.MoveTowards(transform.position, targetPos, playerspeed* Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstacleDamage: 1
   Obstaclespeed: 3
+  blowupfx: {fileID: 8300000, guid: 411b179a53fdbb24784cf29aa066e1d8, type: 3}
   effect: {fileID: 9041715092947232771, guid: 6332c5a19843be84d82ab498ba1abf24, type: 3}
 --- !u!114 &-86482209240438005
 MonoBehaviour:

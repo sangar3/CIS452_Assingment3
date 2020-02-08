@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+   
     public GameObject[] obstaclepatterns;
     
-
+ 
     private float timebtwSpawn;
     public float startTimebtwSpawn;
     public float decreaseTime;
     public float minTime = 0.65f;
+
+    
+
+
+
+
     private void Update()
     {
        
@@ -30,6 +37,7 @@ public class Spawner : MonoBehaviour
         {
             timebtwSpawn -= Time.deltaTime;
         }
+      
     }
         
 

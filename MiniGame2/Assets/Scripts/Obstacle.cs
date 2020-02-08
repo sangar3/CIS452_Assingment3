@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     public int ObstacleDamage = 1;
     public float Obstaclespeed;
-
+    public AudioClip blowupfx;
     public GameObject effect;
 
     private void Update()
@@ -22,6 +22,7 @@ public class Obstacle : MonoBehaviour
             Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<Player>().health -= ObstacleDamage;
             Debug.Log(other.GetComponent<Player>().health); //tells health
+            AudioManager.Instance.PlaySFX(blowupfx, 3.0f);
             Destroy(gameObject);
         }
     }
